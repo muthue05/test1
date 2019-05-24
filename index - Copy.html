@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link hef="css/bootstrap-grid.css" rel="stylesheet" type="text/css">
+<link href="css/custom.css" rel="stylesheet" type="text/css">
+<link href="css/slider.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="js/jssor.slider-27.1.0.min.js" type="text/javascript"></script>
+</head>
+<body>
+<script>
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("mytopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+<script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            var jssor_1_SlideoTransitions = [
+              [{b:0,d:600,y:-290,e:{y:27}}],
+              [{b:0,d:1000,y:185},{b:1000,d:500,o:-1},{b:1500,d:500,o:1},{b:2000,d:1500,r:360},{b:3500,d:1000,rX:30},{b:4500,d:500,rX:-30},{b:5000,d:1000,rY:30},{b:6000,d:500,rY:-30},{b:6500,d:500,sX:1},{b:7000,d:500,sX:-1},{b:7500,d:500,sY:1},{b:8000,d:500,sY:-1},{b:8500,d:500,kX:30},{b:9000,d:500,kX:-30},{b:9500,d:500,kY:30},{b:10000,d:500,kY:-30},{b:10500,d:500,c:{x:125.00,t:-125.00}},{b:11000,d:500,c:{x:-125.00,t:125.00}}],
+              [{b:0,d:600,x:535,e:{x:27}}],
+              [{b:-1,d:1,o:-1},{b:0,d:600,o:1,e:{o:5}}],
+              [{b:-1,d:1,c:{x:250.0,t:-250.0}},{b:0,d:800,c:{x:-250.0,t:250.0},e:{c:{x:7,t:7}}}],
+              [{b:-1,d:1,o:-1},{b:0,d:600,x:-570,o:1,e:{x:6}}],
+              [{b:-1,d:1,o:-1,r:-180},{b:0,d:800,o:1,r:180,e:{r:7}}],
+              [{b:0,d:1000,y:80,e:{y:24}},{b:1000,d:1100,x:570,y:170,o:-1,r:30,sX:9,sY:9,e:{x:2,y:6,r:1,sX:5,sY:5}}],
+              [{b:2000,d:600,rY:30}],
+              [{b:0,d:500,x:-105},{b:500,d:500,x:230},{b:1000,d:500,y:-120},{b:1500,d:500,x:-70,y:120},{b:2600,d:500,y:-80},{b:3100,d:900,y:160,e:{y:24}}],
+              [{b:0,d:1000,o:-0.4,rX:2,rY:1},{b:1000,d:1000,rY:1},{b:2000,d:1000,rX:-1},{b:3000,d:1000,rY:-1},{b:4000,d:1000,o:0.4,rX:-1,rY:-1}]
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $Idle: 2000,
+              $CaptionSliderOptions: {
+                $Class: $JssorCaptionSlideo$,
+                $Transitions: jssor_1_SlideoTransitions,
+                $Breaks: [
+                  [{d:2000,b:1000}]
+                ]
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 980;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        });
+</script>
+
+    
+    <div class="container-fluid top-nav-bg">         
+        <div class="container">
+            <div class="row"> 
+                <div class="col-12 col-sm-12 wrapper-top-nav">
+        	<div class="top-nav" id="mytop-nav">
+              	<a href="#home" class="active">Home</a>
+              	<div class="my-dropdown">
+                	<button class="my-dropdown-btn">Company
+                 	<i class="fa fa-caret-down"></i>
+                	</button>
+                		<div class="my-dropdown-content">
+                  			<ul>
+                   				<li><a href="#">Dropdown Menu 1</a></li>
+                    			<li class="has-submenu"><a href="#">Dropdown Menu 2 <i class="fa fa-caret-down"></i></a>
+                        			<ul class="submenu">
+                            			<li><a href="#">Submenu 1</a></li>
+                            			<li><a href="#">Submenu 2</a></li>
+                            			<li><a href="#">Submenu 3</a></li>
+                        			</ul>
+                    			</li>
+                    			<li><a href="#">Dropdown Menu 3</a></li>
+                  			</ul>
+                		</div>
+              		</div>
+             		<div class="my-dropdown">
+                		<button class="my-dropdown-btn">Solutions
+                  		<i class="fa fa-caret-down"></i>
+               			</button>
+                			<div class="my-dropdown-content">
+                  				<ul>
+                    				<li><a href="#">Dropdown Menu 1</a></li>
+                    				<li class="has-submenu"><a href="#">Dropdown Menu 2 <i class="fa fa-caret-down"></i></a>
+                       		 			<ul class="submenu">
+                                            <li><a href="#">Submenu 1</a></li>
+                                            <li><a href="#">Submenu 2</a></li>
+                                            <li><a href="#">Submenu 3</a></li>
+                        				</ul>
+                    				</li>
+                    				<li><a href="#">Dropdown Menu 3</a></li>
+                  				</ul>
+               				 </div>
+              			</div>
+              			<div class="my-dropdown">
+                			<button class="my-dropdown-btn">Methodologies
+                  			<i class="fa fa-caret-down"></i>
+                			</button>
+                				<div class="my-dropdown-content">
+                  					<ul>
+                    					<li><a href="#">Dropdown Menu 1</a></li>
+                    					<li class="has-submenu"><a href="#">Dropdown Menu 2 <i class="fa fa-caret-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="#">Submenu 1</a></li>
+                                                <li><a href="#">Submenu 2</a></li>
+                                                <li><a href="#">Submenu 3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Dropdown Menu 3</a></li>
+                  					</ul>
+                				</div>
+              					</div> 
+                                <a href="#">3DM</a>
+                                <a href="#">MDM</a>
+                                <a href="#">Technologies</a>
+              					<div class="my-dropdown">
+                				<button class="my-dropdown-btn">Clients
+                  				<i class="fa fa-caret-down"></i>
+                				</button>
+                					<div class="my-dropdown-content">
+                  						<ul>
+                                            <li><a href="#">Dropdown Menu 1</a></li>
+                                            <li class="has-submenu"><a href="#">Dropdown Menu 2 <i class="fa fa-caret-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="#">Submenu 1</a></li>
+                                                    <li><a href="#">Submenu 2</a></li>
+                                                    <li><a href="#">Submenu 3</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Dropdown Menu 3</a></li>
+                  						</ul>
+               						 </div>
+              					</div>               
+                              <a href="#">Contact</a>
+                              <a href="#">Sitemap</a>
+                              <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+						</div>
+     				</div>        
+            </div>
+        </div>            
+    </div>
+    
+    <div class="container-fluid wrapper-topBanner">         
+        <div class="container">
+            <div class="row topBanner"> 
+                <div class="col-3 logo">
+                    <img src="images/logo.png" alt="InfoPlus Technologies">
+                </div>
+                <div class="col-6 caption">
+                        An <strong>ISO 9001 - 2008</strong> Certified
+    Company Your Preferred <br /><strong>ERP & IT</strong> Service Partner    
+                </div>
+                <div class="col-3 banner-right-side">
+                    <div class="search-area">
+                <form class="search" action="#">
+                    <input type="text" placeholder="Search..." name="Search" />
+                        <button type="submit">
+                        	<img src="images/search-icon.png" alt="Search">
+                        </button>
+                </form>
+            </div>
+            <div class="partner">
+           	    <picture>
+            		<source srcset="images/orcale2.jpg" media="(max-width: 768px)">
+                	<source srcset="images/orcale.jpg">
+                	<img src="images/orcale.jpg"><br />PARTNER
+            	</picture>                            	
+            </div>            
+        </div>    
+	</div>
+
+                </div>
+            </div>        
+
+    <div class="container-fluid wrapper-slider">         
+        <div class="container">
+            <div class="row"> 
+                <div class="col-12 slider">
+            	<div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:300px;overflow:hidden;visibility:hidden; border: 5px solid #203349;">
+        <!-- Loading Screen -->
+                <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                    <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="images/spin.svg" />
+                </div>
+                    <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
+                        <div data-p="170.00">
+                            <img data-u="image" src="images/slide/001.jpg" />
+                            <div data-u="caption" data-t="0" style="position:absolute;top:320px;left:30px;width:500px;height:40px;background-color:rgba(255,188,5,0.8);font-family:Oswald,sans-serif;font-size:32px;font-weight:200;line-height:1.2;text-align:center;">Mobile ready, touch swipe</div>
+                        </div>
+                        <div data-p="170.00">
+                            <img data-u="image" src="images/slide/002.jpg" />
+                            <div data-u="caption" data-t="1" style="position:absolute;top:-50px;left:125px;width:500px;height:40px;background-color:rgba(255,188,5,0.8);font-family:Oswald,sans-serif;font-size:32px;font-weight:200;line-height:1.2;text-align:center;">Time lined layer animation</div>
+                        </div>
+                        <div data-p="170.00">
+                            <img data-u="image" src="images/slide/003.jpg" />
+                            <div data-u="caption" data-t="2" style="position:absolute;top:30px;left:-505px;width:500px;height:40px;background-color:rgba(255,188,5,0.8);font-family:Oswald,sans-serif;font-size:32px;font-weight:200;line-height:1.2;text-align:center;">Finger catchable right to left</div>
+                        </div>
+                        <div data-p="170.00">
+                            <img data-u="image" src="images/slide/004.jpg" />
+                            <div data-u="caption" data-t="3" style="position:absolute;top:30px;left:30px;width:500px;height:40px;background-color:rgba(255,188,5,0.8);font-family:Oswald,sans-serif;font-size:32px;font-weight:200;line-height:1.2;text-align:center;">responsive, scale smoothly</div>
+                        </div>
+                        <div data-p="170.00">
+                            <img data-u="image" src="images/slide/005.jpg" />
+                            <div data-u="caption" data-t="4" style="position:absolute;top:30px;left:30px;width:500px;height:40px;background-color:rgba(255,188,5,0.8);font-family:Oswald,sans-serif;font-size:32px;font-weight:200;line-height:1.2;text-align:center;">image, text, and custom layers</div>
+                        </div>
+                        <div data-p="170.00">
+                            <img data-u="image" src="images/slide/006.jpg" />
+                            <div data-u="caption" data-t="5" style="position:absolute;top:30px;left:600px;width:500px;height:40px;background-color:rgba(255,188,5,0.8);font-family:Oswald,sans-serif;font-size:32px;font-weight:200;line-height:1.2;text-align:center;">tons of transition type</div>
+                        </div>
+                        <div data-p="170.00">
+                            <img data-u="image" src="images/slide/007.jpg" />
+                            <div data-u="caption" data-t="6" style="position:absolute;top:30px;left:30px;width:500px;height:40px;background-color:rgba(255,188,5,0.8);font-family:Oswald,sans-serif;font-size:32px;font-weight:200;line-height:1.2;text-align:center;">visual slider maker</div>
+                        </div>
+                        <div data-b="0" data-p="170.00">
+                            <img data-u="image" src="images/slide/008.jpg" />
+                            <div data-u="caption" data-t="7" style="position:absolute;top:-50px;left:30px;width:500px;height:40px;background-color:rgba(255,188,5,0.8);font-family:Oswald,sans-serif;font-size:32px;font-weight:200;line-height:1.2;text-align:center;">play in and play out</div>
+                        </div>
+                        <div data-p="170.00">
+                            <img data-u="image" src="images/slide/009.jpg" />
+                            <div data-u="caption" data-t="8" style="position:absolute;top:25px;left:150px;width:250px;height:250px;background-color:rgba(40,177,255,0.6);overflow:hidden;">
+                                <div data-u="caption" data-t="9" style="position:absolute;top:100px;left:25px;width:200px;height:50px;font-family:Oswald,sans-serif;font-size:24px;font-weight:200;line-height:2.08;">A Child Layer</div>
+                            </div>
+                        </div>
+                        <div data-p="170.00">
+                            <img data-u="image" src="images/slide/010.jpg" />
+                            <div data-u="caption" data-t="10" style="position:absolute;top:25px;left:100px;width:300px;height:260px;background-color:rgba(40,177,255,0.6);font-family:Oswald,sans-serif;font-size:24px;font-weight:200;line-height:1.25;padding:15px 15px 15px 15px;box-sizing:border-box;">This is full customized content layer.<br />â€‹<br />
+            
+                                Everything is allowed.<br />â€‹<br />You can insert
+            
+                                <a href="http://wwww.jssor.com">
+                                    a link
+                                </a> or an image
+            
+                                <img src="images/slide/icon_chrome.png" /> here.
+                            </div>
+                        </div>
+                     </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb052" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+            <div data-u="prototype" class="i" style="width:16px;height:16px;">
+                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+                </svg>
+            </div>
+        </div>
+        <!-- Arrow Navigator -->
+        <div data-u="arrowleft" class="jssora053" style="width:55px;height:55px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+            </svg>
+        </div>
+        <div data-u="arrowright" class="jssora053" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+            </svg>
+        		</div>
+    		</div>
+            </div>
+
+            </div>
+        </div>            
+    </div>
+    
+    <div class="container-fluid">         
+        <div class="container">
+            <div class="row"> 
+                <div class="col-3 col-sm-3 left-part-area">
+                    <div class="left-part">
+                        <div class="left-menu">
+                            <div class="header">
+                                Solution & Services
+                            </div>
+                            <ul>
+                                <li>ERP</li>
+                                <li class="sub-menu1">Oracle Solution</li>
+                                <li class="sub-menu1">SAP All-in-One<sup>TM</sup></li>
+                                <li class="sub-menu2">SAP Implementations</li>
+                                <li class="sub-menu2">Outsourcing Managed Services</li>
+                                <li class="sub-menu2">SAP Net Weaver BI</li>
+                                <li class="sub-menu2">SAP Business ByDesign<sup>TM</sup></li>
+                                <li class="sub-menu2">The SAP Focus</li>
+                                <li class="sub-menu2">Consulting Services</li>
+                                <li>Offshore Solutions</li>
+                                <li>IBM Solutions</li>
+                                <li>Business Intelligence</li>
+                                <li class="last">Data Warehouse</li>                                
+                            </ul>
+                            <div class="header">
+                                SAP Bussiness ByDesign
+                            </div>
+                            <div class="image-left">
+                                <img src="images/SAP-bussiness.jpg" width="100%" height="100%" alt="Business Solution" />
+                            </div>
+                            <div class="txt-lb">
+                    	       Comprehensive, Affordable, Flexible and On-Demand all business solution for mid sized companies.
+                            </div>
+                            <div class="more-left">
+                   	 	      <a href="#"><img src="images/bullet3.png" width="12" height="10"> Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-6 col-sm-6 content-part-area">
+                    <div class="row">
+                        <div class="content-part">
+                            <div class="content">
+                                <div class="header">
+                                    Welcome to Infoplus Technologies
+                                </div>
+                                <div class="txt">
+                                <picture>
+                                      <source srcset="images/home1-small.jpg" media="(max-width: 800px)">
+                                      <source srcset="images/home1.jpg">
+                                      <img src="images/home1.jpg" class="imgl" align="left">
+                                </picture>
+
+                        Infoplus Technologies UK Limited is a global IT services company focusing on Enterprise solutions and integration services consulting ( SAP / Oracle ), software development, product solutions for education segment and IT consulting services offering outsourcing solutions to enterprises worldwide. Since its inception, ITL has focused on a principle to maximize outputs for its clients and partners through cost savings, enhancing productivity and quality.
+                            </div>
+                                <div class="more">
+                                  <a href="#"><img src="images/bullet3.png" width="12" height="10"> Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                    <div class="content-part2">
+                        <div class="cons-serv">
+                            <div class="content">
+                                <div class="header2">On Demand Consulting Services</div>
+                                <div class="txt-b">
+                                	SAP All-in-One<sup>TM</sup> : Oracle E-Business Suite: Your Preferred Vendor and Service Partner.
+                                </div>
+                                <div class="txt">
+                                	<picture>
+                                  		<source srcset="images/home5.jpg" media="(max-width: 800px)">
+                                  		<source srcset="images/home2.jpg">
+                                  		<img src="images/home2.jpg" class="imgl2" align="left">
+                                	</picture>
+                    As your reliable service partner, Infoplus committed to meet end-to-end ERP solutions (SAP / Oracle) or deliver to client-specific requirements for Automobile, Banking, Education, Finance, Healthcare, Insurance, Pharmaceutical, Supply Chain, Services, Telecom SME segments worldwide.
+                    			</div>
+                                <div class="more">
+                   	 	          <a href="#"><img src="images/bullet3.png" width="12" height="10"> Read More</a>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                        <div class="mat-manage">
+                            <div class="content">
+                                <div class="header2">Material Management</div>
+                                <div class="txt-b">
+                                	SAP All-in-One<sup>TM</sup> : 	A unique Infoplus Service Offering to Manfacturing, Distribution, Automobile verticals.
+                                </div>
+                                <div class="txt">
+                                	<picture>
+                                    <source srcset="images/home4.jpg" media="(max-width: 800px)">
+                                  		<source srcset="images/home3.jpg">
+                                  		<img src="images/home3.jpg" class="imgr2" align="left">
+                                	</picture>
+                    Engage Infoplus consultants who understand your business and complex integrated product lines or components to successfully implement or integrate Material Management for optimizing inventory, provide increased compliance cost-effectively. Keogh Consulting, Sparesfinder benefitted from this unique offering.
+                    			</div>
+                                <div class="more">
+                   	 	<a href="#"><img src="images/bullet3.png" width="12" height="10"> Read More</a>
+                    </div>
+
+                            </div>
+                        </div>
+                        
+                    </div>
+                    </div>
+                
+                
+                <div class="row">
+                    <div class="content-part">
+                        <div class="content">
+                            <div class="header">
+                                OutSource SAP Needs
+                            </div>
+                            <div class="txt">
+                        	
+                        
+                    As a SAP focused company, we deliver client-specific enterprise solutions and services. Our SAP Engagement Models enable you to derive best advantages from large European and Asian presence. Access certified SAP Functional and Technical professionals, at affordable rates. Quality, Commitment and Satisfactions assured.
+                    	</div>
+                        <div class="more">
+                   	 	  <a href="#"><img src="images/bullet3.png" width="12" height="10"> Read More</a>
+                        </div>
+
+                        </div>
+                    </div>
+                        </div>
+                
+                
+                </div>
+            
+            
+                
+                <div class="col-3 col-sm-3 right-part-area">
+                    <div class="right-part">
+                        <div class="header">
+                                News
+                            </div>
+                            <div class="news">
+                        <marquee behavior="scroll" direction="up" height="157" scrollamount="1" scrolldelay="10" onmouseover="this.stop()" onmouseout="this.start()">
+                        <ul>
+                				<li><a href="#">Infoplus signs 2 new clients to  meet their growing consulting needs for whole of Europe.</a></li> 
+   								<li><a href="http://www.infoplusltd.co.uk/">Extended our business to Kazahastan by signing with ETS Elettra Energia, an Italian Engineering and Field Services company.</a></li>
+   								<li><a href="#">Opening for Software Development<br>
+                          Eligibility: B.Sc / B.E / B.Tech / MCA.<br>
+                          Please your mail cv to <strong>careers@infoplusltd.co.uk</strong></a></li>
+                          <li><a href="#">South Tamil Nadu Job Opening for IDC Operator,<br>
+                          Eligibility: Diploma or any graduate with IT knowledge.<br>
+                          Please your mail cv to <strong>careers@infoplusltd.co.uk</strong></a></li>
+                          <li><a href="#">Expanded its European presence moving to Capital Business Park, Borehamwood, a 10,000 square feet state-of-art near-shore delivery centre.</a></li>
+    						</ul>
+                            </marquee>
+            		</div>
+
+                            <div class="header">
+                                Our Support
+                            </div>
+                            <div class="image-right">
+                                <img src="images/support.jpg" width="100%" height="100%" alt="Business Solution" />
+                            </div>
+                            <div class="txt-lb">
+                    	       Comprehensive, Affordable, Flexible and On-Demand all business solution for mid sized companies.
+                            </div>
+                            <div class="more-left">
+                   	 	      <a href="#"><img src="images/bullet3.png" width="12" height="10"> Read More</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>            
+    </div>
+    
+    <div class="container-fluid top-nav-bg">         
+        <div class="container">
+            <div class="row"> 
+                <div class="col-12">
+                    Top Menu
+                </div>
+            </div>
+        </div>            
+    </div>
+
+
+
+<script>
+/* Toggle between adding and removing the "responsive" class to top-nav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("mytop-nav");
+  if (x.className === "top-nav") {
+    x.className += " responsive";
+  } else {
+    x.className = "top-nav";
+  }
+}
+</script>
+
+
+
+
+</body>
